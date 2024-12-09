@@ -60,7 +60,8 @@ def gen_img(prompt: str = Field(description="Prompt for image generation."),) ->
     Returns:
         None: Displays the generated image.
     """
-    client = InferenceClient("black-forest-labs/FLUX.1-dev", token="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")
+    hugging_face_token = os.getenv("HUGGING_FACE_TOKEN")
+    client = InferenceClient("black-forest-labs/FLUX.1-dev", token=hugging_face_token)
 
     try:
         image = client.text_to_image(prompt)
