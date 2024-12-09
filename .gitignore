@@ -1,0 +1,15 @@
+# Ignore environment file
+api.env
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore Streamlit logs (optional)
+.streamlit/
+
+# Ignore system files
+.DS_Store
